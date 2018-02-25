@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+import sys, commands, math
+import os, time
+
+user = commands.getoutput('whoami')
+if user == 'root':
+    print 'Não pode ser root!'
+    exit(0)
+
+path = "/home/aluno/gabriela"
+qtd = 500
+while qtd:
+	comando = "./tiny "+ path +"/videoOriginal/coco{0}" + aux + "yuv >> resultado.txt".fo
+	print 'Comando 4: ',comando
+	os.system(comando)
+	os.system('./QoS_special')
+	os.system('rm arq')
+	time.sleep(1)

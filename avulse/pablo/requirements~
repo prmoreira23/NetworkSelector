@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Instalar MySql Server 
+sudo apt-get install mysql-server -y
+
+# Instalar módulo MySql Python
+sudo dpkg -i DEB_PACKAGE
+sudo apt-get install python-dev libmysqlclient-dev
+sudo apt-get install python-mysqldb
+
+

@@ -1,0 +1,48 @@
+
+** (process:1325): WARNING **: Error in getting active connection 'Vpn' property: (4) Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+** (process:1325): WARNING **: Could not create object for /org/freedesktop/NetworkManager/ActiveConnection/2759: unknown object type
+** Message: Caught signal 2, shutting down...
+
+** (process:2408): WARNING **: Could not initialize NMClient /org/freedesktop/NetworkManager: The name org.freedesktop.NetworkManager was not provided by any .service files
+
+** (process:2400): WARNING **: Could not initialize NMClient /org/freedesktop/NetworkManager: The name org.freedesktop.NetworkManager was not provided by any .service files
+
+** (process:32270): WARNING **: Could not create object for /org/freedesktop/NetworkManager/Devices/0: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+** (process:32270): WARNING **: Error in get_property: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+
+(process:32270): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(process:32270): GLib-GObject-CRITICAL **: g_value_get_uint: assertion 'G_VALUE_HOLDS_UINT (value)' failed
+
+** (process:32270): WARNING **: Unknown device type 0
+
+** (process:32270): WARNING **: Could not create object for /org/freedesktop/NetworkManager/Devices/1: unknown object type
+
+** (process:32270): WARNING **: Error in get_property: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+
+(process:32270): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(process:32270): GLib-GObject-CRITICAL **: g_value_get_uint: assertion 'G_VALUE_HOLDS_UINT (value)' failed
+
+** (process:32270): WARNING **: Unknown device type 0
+
+** (process:32270): WARNING **: Could not create object for /org/freedesktop/NetworkManager/Devices/4: unknown object type
+
+** (process:32270): WARNING **: Error in get_property: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+
+(process:32270): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(process:32270): GLib-GObject-CRITICAL **: g_value_get_uint: assertion 'G_VALUE_HOLDS_UINT (value)' failed
+
+** (process:32270): WARNING **: Unknown device type 0
+
+** (process:32270): WARNING **: Could not create object for /org/freedesktop/NetworkManager/Devices/5: unknown object type
+
+** (process:32270): WARNING **: Could not initialize NMClient /org/freedesktop/NetworkManager: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+** (process:2456): WARNING **: Could not initialize NMClient /org/freedesktop/NetworkManager: The name org.freedesktop.NetworkManager was not provided by any .service files

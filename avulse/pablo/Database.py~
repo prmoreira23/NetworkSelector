@@ -1,0 +1,78 @@
+# -*- coding: utf-8 -*-
+import mysql.connector
+from mysql.connector import errorcode
+
+config = {
+  'user': 'root',
+  'password': '123456',
+  'host': '127.0.0.1',
+  'raise_on_warnings': True,
+}
+
+DATABASE = "bestnet"
+TABLES = {} 
+connection = ""
+cursor = ""
+
+TABLES['networks'] = (
+    "CREATE TABLE `networks` ("
+    "  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,"
+    "  `bssid` varchar(17) NOT NULL UNIQUE,"
+    "  `essid` varchar(32) NOT NULL,"
+    "  `stars` tinyint NOT NULL,"
+    "  `packet_loss` decimal(12,8) NOT NULL,"
+    "  `jitter` decimal(12,8) NOT NULL,"
+    "  `delay` decimal(12,8) NOT NULL,"
+    "  `throughput` decimal(12,8) NOT NULL,"
+    "  `signal_level` decimal(12,8) NOT NULL,"
+    "  `monetary_cost` decimal(12,8) NOT NULL,"
+    "  `active` BOOL NOT NULL"
+    ") ENGINE=InnoDB")
+
+def create_database(cursor):
+    try:
+        config["database"] = DATABASE
+        cursor.execute("CREATE DATABASE {} DEFAULT CHARACTER SET 'utf8'".format(config["database"]))
+        print "Database '{}' created sucessfully!".format(config["database"])
+        connection.database = config['database']
+        create_tables(cursor)
+    except mysql.connector.Error as e:
+        print("Failed creating database: {}".format(e))
+        exit(1)
+
+def create_tables(cursor):
+    for table, sql in TABLES.iteritems():
+        try:
+            print "Creating table '{}': ".format(table),
+            cursor.execute(sql)
+        except mysql.connector.Error as err:
+            if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+                print "already exists."
+            else:
+                print err.msg
+        else:
+            print "OK" 
+
+try:
+    connection = mysql.connector.connect(**config)
+    connection.database = DATABASE
+    cursor = connection.cursor()
+    print "Database '{}' exists!".format(DATABASE)
+    print __name__
+except mysql.connector.Error as e:
+    if e.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+        print "Something is wrong with your user name or password"
+    elif e.errno == errorcode.ER_BAD_DB_ERROR:
+        print "Database '{}' does not exists!".format(DATABASE)
+        print "creating database '{}'...".format(DATABASE)
+        connection = mysql.connector.connect(**config)
+        cursor = connection.cursor()
+        create_database(cursor)
+    else:
+        print e
+        print 'MySQL is currently not installed. Try to run: sudo apt-get install mysql-server -y'
+        exit(1)
+else:
+    create_tables(cursor)
+    cursor.close()
+    connection.close()

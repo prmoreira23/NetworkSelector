@@ -1,0 +1,8 @@
+ sudo service network-manager stop
+
+
+iw dev wlan0 interface add vwlan0 type managed
+ip link set dev vwlan0 address 54:72:4f:9b:8c:6e
+ip link set dev vwlan0 up
+iwconfig vwlan0 essid GREDES_TESTE
+dhclient vwlan0

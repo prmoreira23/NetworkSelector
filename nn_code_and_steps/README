@@ -1,0 +1,8 @@
+A rede neural foi projetada, treinada e é implantada utilizando a biblioteca PyBrain.
+
+* Primeiro Passo: Instalar a biblioteca PyBrain;
+  Dentro do diretório 'pybrain_how_to_install' você encontrará um shell script ('installing-pybrain.sh'), basta executá-lo. Não se esqueça de adicionar permissão de execução para os dois arquivos contidos dentro do diretório. Caso tenha se esquecido, o comando é o seguinte: chmod +x <file_name>
+
+* O arquivo mais importante e que contém a rede neural é o arquivo 'network.xml', ele que deverá ser carregado para depois ser ativado
+
+O arquivo Classifier tem um exemplo de uso da rede neural para classificar algumas redes.

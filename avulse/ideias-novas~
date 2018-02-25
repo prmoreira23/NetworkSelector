@@ -1,0 +1,26 @@
+35/70
+50/100
+40/80
+
+Level * 100 / Maximum
+
+
+Conectar em rede c
+
+nmcli d wifi connect GREDES_TESTE iface wlan0
+
+nmcli d wifi connect GREDES_NS02 password G@@@teste iface wlan0
+
+Habilitar HiFive
+
+nmcli nm wifi on
+
+Desconectar Interface 
+
+nmcli dev disconnect iface wlan0 --nowait
+
+
+ESSID                 |       Senha       |       IP Gateway
+GREDES_TESTE					                 192.169.40.1
+GREDES_NS02		            G@@@teste		        6.6.6.1
+GREDES_NS01		            G@#teste		        5.5.5.1		

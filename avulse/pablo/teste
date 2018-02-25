@@ -1,0 +1,3 @@
+--- 8.8.8.8 ping statistics ---
+15000 packets transmitted, 14873 received, 0% packet loss, time 183603ms
+rtt min/avg/max/mdev = 37.817/43.154/22490.336/286.661 ms, pipe 1845, ipg/ewma 12.241/38.404 ms

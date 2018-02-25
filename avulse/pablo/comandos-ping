@@ -1,0 +1,17 @@
+Quantidade de pacotes transmitidos
+pacotes_trans = cat teste | grep packets\ transmitted | awk '{print $1}'
+
+Quantidade de pacotes recebidos
+pacotes_rec = cat teste | grep packets\ transmitted | awk '{print $4}'
+
+Perda de pacotes
+float((pacotes_trans-pacotes_rec) * 100) / pacotes_trans
+
+Vazão
+128*(float(recebidos) / float(tempo))
+
+Tempo total gasto
+cat teste | grep packets\ transmitted | awk '{print $10}'
+
+Tempo gasto sem o ms ao final
+va[:-2]
